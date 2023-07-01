@@ -1,0 +1,175 @@
+#:kivy 2.1.0
+
+<Interface>:
+
+    canvas.before:
+        Rectangle:
+            pos: self.pos
+            size: self.size
+            source: 'Data/img/bg.jpg'
+
+    GridLayout:
+        cols: 1
+        size: root.width , root.height
+
+        GridLayout:
+            rows: 2
+
+            Label:
+                text: 'Brainwords'
+                font_name: 'Arial'
+                color: '#8FE3CF'
+                font_size: 80
+            
+            Label:
+                text: 'Version 0.0.1'
+                font_name: 'Arial'
+                color: '8FE3CF'
+                font_size: 20
+        
+        GridLayout:
+            rows: 1
+
+            Label:
+                id: word_shown
+                text: 'Test'
+                font_name: 'Arial'
+                color: '#8FE3CF'
+                font_size: 80
+                canvas.before:
+                    Color:
+                        rgb: 255,255,255
+                    Rectangle:
+                        pos: self.pos
+                        size: self.size
+        
+        GridLayout:
+            rows: 1
+            cols: 2
+
+            Button:
+                text: 'Akzeptieren'
+                font_name: 'Arial'
+                color: '#8FE3CF'
+                font_size: 40
+                background_color: "#002B5B"
+                on_release: root.accept_word()
+            
+            Button:
+                text: 'Verwerfen'
+                font_name: 'Arial'
+                color: '#8FE3CF'
+                font_size: 40
+                background_color: "#002B5B"
+                on_release: root.decline_word()
+                
+        GridLayout:
+            rows: 1
+            cols: 1
+
+            Label:
+                id: text_shown
+                text: "Gedicht"
+                font_size: 30
+                color: '#8FE3CF'
+                font_name: 'Arial'
+                canvas.before:
+                    Color:
+                        rgb: 0,0,0
+                    Rectangle:
+                        pos: self.pos
+                        size: self.size
+
+        GridLayout:
+            rows: 3
+            cols: 2
+            
+            GridLayout:
+                rows: 3
+                cols: 1
+
+                GridLayout:
+                    rows: 1
+                    cols: 2
+
+                    Label:
+                        id: label_label_attention
+                        text: "Konzentration"
+                        font_size: 30
+                        color: '#8FE3CF'
+                        font_name: 'Arial'
+                        canvas.before:
+                            Color:
+                                rgb: 0,0,0
+                            Rectangle:
+                                pos: self.pos
+                                size: self.size
+
+                    Label:
+                        id: label_attention
+                        text: "0"
+                        color: '#8FE3CF'
+                        font_name: 'Arial'
+                        font_size: 30
+                        halign: "center"
+                        
+                        canvas.before:
+                            Color:
+                                rgb: 0,0,0
+                            Rectangle:
+                                pos: self.pos
+                                size: self.size
+
+                    
+                GridLayout:
+                    rows: 1
+                    cols: 2
+
+                    Label:
+                        id: label_label_meditation
+                        text: "Meditation"
+                        color: '#8FE3CF'
+                        font_size: 30
+                        font_name: 'Arial'
+                        canvas.before:
+                            Color:
+                                rgb: 0,0,0
+                            Rectangle:
+                                pos: self.pos
+                                size: self.size
+                    Label:
+                        id: label_meditation
+                        text: "0"
+                        color: '#8FE3CF'
+                        font_name: 'Arial'
+                        font_size: 30
+                        halign: "center"
+                        
+                        canvas.before:
+                            Color:
+                                rgb: 0,0,0
+                            Rectangle:
+                                pos: self.pos
+                                size: self.size
+
+                GridLayout:
+                    rows: 1
+                    cols: 2
+
+                    Button:
+                        text: 'Text löschen'
+                        font_name: 'Arial'
+                        color: '#8FE3CF'
+                        font_size: 40
+                        background_color: "#002B5B"
+                        on_release: root.delete_text()
+
+                    Button:
+                        id: start_button
+                        text: 'Start'
+                        font_name: 'Arial'
+                        color: '#8FE3CF'
+                        font_size: 40
+                        background_color: "#002B5B"
+                        disabled: False
+                        on_release: root.start()
