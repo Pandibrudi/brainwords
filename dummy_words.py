@@ -1,7 +1,66 @@
-nouns = ["die Katze", "ein Hund", "die Fichte", "der Lorbeer", "die Akazie", "der Holunder", "das Meer", "der Bach", "der Morgentau"]
+nouns = ["Katzen", 
+         "Hunde", 
+         "Fichten", 
+         "Lorbeerzweige", 
+         "Akazien", 
+         "Holunderblüten", 
+         "Wellen", 
+         "Bachverläufe", 
+         "Tautropfen",
+         "Oberflächen",
+         "Gefühle",
+         "Schlagbohrer",
+         "DAX-Vorstände",
+         "Menschen",
+         "Leben",
+         "Augen",
+         "Fenster",
+         "Kinder",
+         "Gedanken",
+         "Ideale"]
 
-verbs = ["vergeht", "stöbert", "spricht", "stirbt", "hofft", "verliert", "strömt"]
+verbs = ["vergehen", 
+         "stöbern", 
+         "sprechen", 
+         "sterben", 
+         "hoffen", 
+         "verlieren", 
+         "strömen",
+         "jauchzen",
+         "julbilieren",
+         "versagen",
+         "sind"]
 
-prepositions = ["in", "unter", "durch", "auf", "hinter", "neben"]
+prepositions = ["in", 
+                "unter", 
+                "durch", 
+                "auf", 
+                "hinter", 
+                "neben",
+                "an",
+                "so"]
 
-adjectives = ["grazil", "erhaben", "verwegen", "listig", "hintersinnig", "beschwingt"]
+adjectives = ["grazil", 
+              "erhaben", 
+              "verwegen", 
+              "listig", 
+              "hintersinnig", 
+              "beschwingt",
+              "todesfürchtig",
+              "schelmisch",
+              "dichten",
+              "freudig",
+              "entfremdet",
+              "mystisch",]
+
+gerunds = ["taumelnden",
+           "fließenden",
+           "jammernden",
+           "brillierenden",
+           "jauchzenden",
+           "verstörenden",
+           "glimmenden",
+           "schmachtenden",
+           "schlummernden",
+           "drohenden",
+           "blutenden"]

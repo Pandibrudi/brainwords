@@ -36,16 +36,19 @@
                 font_name: 'Arial'
                 color: '#8FE3CF'
                 font_size: 80
+                text_size: self.width, None
+                size_hint: 1, None
+                height: self.texture_size[1]
                 canvas.before:
                     Color:
                         rgb: 255,255,255
                     Rectangle:
                         pos: self.pos
                         size: self.size
-        
+
         GridLayout:
             rows: 1
-            cols: 2
+            cols: 3
 
             Button:
                 text: 'Akzeptieren'
@@ -62,6 +65,14 @@
                 font_size: 40
                 background_color: "#002B5B"
                 on_release: root.decline_word()
+            
+            Button:
+                text: 'Absatz'
+                font_name: 'Arial'
+                color: '#8FE3CF'
+                font_size: 40
+                background_color: "#002B5B"
+                on_release: root.line_break()
                 
         GridLayout:
             rows: 1
@@ -154,7 +165,7 @@
 
                 GridLayout:
                     rows: 1
-                    cols: 2
+                    cols: 3
 
                     Button:
                         text: 'Text löschen'
@@ -163,6 +174,14 @@
                         font_size: 40
                         background_color: "#002B5B"
                         on_release: root.delete_text()
+                    
+                    Button:
+                        text: 'Text speichern'
+                        font_name: 'Arial'
+                        color: '#8FE3CF'
+                        font_size: 40
+                        background_color: "#002B5B"
+                        on_release: root.save_text()
 
                     Button:
                         id: start_button

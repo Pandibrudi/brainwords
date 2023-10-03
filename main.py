@@ -2,6 +2,7 @@ import kivy
 import time
 import mindwave
 import dummy_words
+import lines_volkstheater
 import random
 from functools import partial
 from kivy.app import App
@@ -89,8 +90,11 @@ class Interface(Widget):
         v = dummy_words.verbs
         p = dummy_words.prepositions
         n = dummy_words.nouns
+        g = dummy_words.gerunds
+        vt = lines_volkstheater.text_list
 
-        type_of_words = [a,v,p,n]
+        type_of_words = [a,v,p,n, g]
+        type_of_words = [vt]
 
         rnd_type = random.choice(type_of_words)
 
@@ -108,6 +112,7 @@ class Interface(Widget):
 
     def accept_word(self):
         self.text = self.text + " " + self.current_word
+        self.text = self.text + "\n" #nur für Volkstheater
         self.get_word()
         self.show_text()
 
@@ -115,6 +120,16 @@ class Interface(Widget):
         self.text = ""
         self.show_text()
         print("Text gelöscht")
+    
+    def save_text(self):
+        with open("text.txt", "w", encoding="utf-8") as output:
+            output.writelines(self.text)
+        self.show_text()
+        print("Text gespeichert")
+    
+    def line_break(self):
+        self.text = self.text + "\n"
+        self.show_text()
 
     def show_text(self):
         print(self.text)
